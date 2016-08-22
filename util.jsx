@@ -5,7 +5,6 @@ michael.wescoat@sjsu.edu
 
 Some general-purpose definitions.
 
-
 This and other .jsx files should be placed in the Startup Scripts folder for
 Illustrator, which should be in one of these locations:
 
@@ -14,6 +13,9 @@ Mac OS:  /Applications/Adobe lllustrator CC/Startup Scripts/
 
 People using other versions of Illustrator may need to change "CC" in the above
 paths to "C6," "C5," etc.
+
+Make sure that any jsx file that depends on these definitions does not depend
+on having them pre-loaded.
 */
 
 var CoSS = this.CoSS || {};

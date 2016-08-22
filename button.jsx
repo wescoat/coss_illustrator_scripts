@@ -90,7 +90,13 @@ var CoSS = this.CoSS || {};
 			blue: 139        //   blue
 		};
 
-	function Button() {}
+	function Button(title, text, size, height, options) {
+		my.extend(this, defaults, options || {});
+		this.title = title;
+		this.text = text;
+		this.size = size;
+		this.height = height;
+	}
 
 	Button.prototype.addDocument = function () {
 		this.document = app.documents.addDocument('', this.documentPreset());
@@ -220,14 +226,7 @@ var CoSS = this.CoSS || {};
 	}
 
 	my.button = function (title, text, size, height, options) {
-		var object = new Button();
-
-		my.extend(object, {
-			title: title,
-			text: text,
-			size: size,
-			height: height
-		}, defaults, options || {});
+		var object = new Button(title, text, size, height, options);
 
 		object.addDocument();
 	}
