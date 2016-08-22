@@ -14,8 +14,8 @@ Mac OS:  /Applications/Adobe lllustrator CC/Startup Scripts/
 People using other versions of Illustrator may need to change "CC" in the above
 paths to "C6," "C5," etc.
 
-Make sure that any jsx file that depends on these definitions does not depend
-on having them pre-loaded.
+Make sure that any .jsx file that depends on these definitions does not need to
+have them pre-loaded.
 */
 
 var CoSS = this.CoSS || {};
